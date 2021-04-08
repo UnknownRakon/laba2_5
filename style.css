@@ -31,7 +31,7 @@ header{
 }
 .header-info{
     display: grid;
-    grid-template-columns: 150px minmax(100px, 4.5fr) 150px 150px;
+    grid-template-columns: 150px minmax(100px, 1fr) 150px 150px;
     padding-top: 1%;
 }
 .info-text--city{
@@ -48,4 +48,52 @@ header{
 }
 .info-text--phone{
     grid-column: 4/5;
+    justify-self: end;
+}
+.header-logobox{
+    display: grid;
+    grid-template-columns: 122px minmax(100px, 1fr) 122px;
+    grid-template-rows: 130px;
+    align-items: center;
+}
+.logobox-menu{
+    grid-column: 1/2;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+}
+.logobox-menu svg{
+    margin-right: 10px;
+}
+.logobox-logo{
+    justify-self: center;
+    grid-column: 2/3;
+    grid-row: 1;
+}
+.logo-buttons{
+    grid-column: 3/4;
+    grid-row: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.header-navbar ul{
+    list-style: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 140%;
+    display: flex;
+    justify-content: space-between;
+}
+.header-navbar a{
+    color: #FFFFFF;
+    text-decoration: none;
+}
+.header-navbar li{
+    display: flex;
+    align-items: center;
+}
+.header-navbar svg{
+    margin-left: 10px;
 }
