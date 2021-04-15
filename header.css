@@ -24,7 +24,7 @@
 @media (min-width: 1641px) {
     .header{
         background-image: url(img/header_big.jpg);
-        background-size: 100%;
+        background-size: auto 100%;
     }
 }
 .header-container{
@@ -133,7 +133,7 @@
     justify-content: space-between;
 }
 .logo-buttons svg{
-    width: 90%;
+    width: 30px;
     height: auto;
 }
 .info-text--hidden{
@@ -192,7 +192,7 @@
 }
 .header-heading{
     display: grid;
-    grid-template-rows: 2.3fr 1fr 1fr;
+    grid-template-rows: 2.1fr 1fr 1fr;
     grid-template-columns: 2fr 1fr 0.1fr;
 }
 .heading-h1{
@@ -334,10 +334,14 @@
     transform: scale(2);
 }
 /* Верхняя палень шапки при ширине меньше 750px */
-@media (max-width: 750px) {
+@media (max-width: 900px) {
     .header-info{
         grid-template-columns: repeat(4, 1fr);
         padding-top: 10%;
+    }
+    .logo-buttons svg{
+        width: 25px;
+        height: auto;
     }
     .info-text--city{
         display: none;
@@ -376,6 +380,7 @@
         grid-row: 2/3;
         grid-column: 2/3;
         padding-top: 2%;
+        justify-self: center;
     }
     .logobox-logo{
         grid-row: 1/2;
@@ -389,5 +394,6 @@
     .logo-buttons{
         grid-row: 2/3;
         grid-column: 3/4;
+        justify-self: end;
     }
 }
