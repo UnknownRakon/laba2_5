@@ -27,45 +27,45 @@
         background-size: auto 100%;
     }
 }
-.header-container{
+.page-container{
     width: 65%;
     margin: 0 auto;
 }
 /* Размеры контейнера */
 @media (max-width: 691px) { 
-    .header-container{
+    .page-container{
         width: 95%;
     }
  }
 @media (min-width: 691px) { 
-    .header-container{
+    .page-container{
         width: 90%;
     }
  }
 
 @media (min-width: 807px) { 
-    .header-container{
+    .page-container{
         width: 85%;
     }
 }
 
 @media (min-width: 992px) { 
-    .header-container{
+    .page-container{
         width: 80%;
     }
 }
 @media (min-width: 1200px) { 
-    .header-container{
+    .page-container{
         width: 75%;
     }
 }
 @media (min-width: 1600px) { 
-    .header-container{
+    .page-container{
         width: 70%;
     }
 }
 @media (min-width: 1800px) { 
-    .header-container{
+    .page-container{
         width: 65%;
     }
 }
@@ -131,6 +131,7 @@
     grid-row: 1;
     display: flex;
     justify-content: space-between;
+    justify-self: end;
 }
 .logo-buttons svg{
     width: 30px;
@@ -192,7 +193,7 @@
 }
 .header-heading{
     display: grid;
-    grid-template-rows: 2.1fr 1fr 1fr;
+    grid-template-rows: 2fr 1fr 1fr;
     grid-template-columns: 2fr 1fr 0.1fr;
 }
 .heading-h1{
@@ -334,14 +335,10 @@
     transform: scale(2);
 }
 /* Верхняя палень шапки при ширине меньше 750px */
-@media (max-width: 900px) {
+@media (max-width: 750px) {
     .header-info{
         grid-template-columns: repeat(4, 1fr);
         padding-top: 10%;
-    }
-    .logo-buttons svg{
-        width: 25px;
-        height: auto;
     }
     .info-text--city{
         display: none;
@@ -356,6 +353,7 @@
     .info-text--connect{
         grid-column: 3/5;
         grid-row: 1;
+        justify-self: end;
     }
     .header-heading{
         grid-template-columns: 3fr 0.5fr 0.1fr;
@@ -394,6 +392,54 @@
     .logo-buttons{
         grid-row: 2/3;
         grid-column: 3/4;
-        justify-self: end;
+    }
+}
+
+/* MAIN */
+
+.main-nav--countries{
+    width: 100vw;
+    height: 410px;
+    display: flex;
+    flex-direction: column;
+}
+.countries-menu{
+    height: 80%;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.countries-menu a{
+    text-decoration: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #333333;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.main-logo{
+    width: 238px;
+    height: auto;
+    align-self: flex-end;
+    visibility: hidden;
+}
+@media (max-width: 900px) {
+    .main-nav--countries{
+        height: 507px;
+    }
+    .countries-menu{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+    }
+    .countries-menu li{
+        margin-top: 20px;
+    }
+    .main-logo{
+        visibility: visible;
     }
 }
