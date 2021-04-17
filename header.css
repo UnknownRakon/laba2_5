@@ -25,7 +25,7 @@
 @media (min-width: 1641px) {
     .header{
         background-image: url(img/header_big.jpg);
-        background-size: auto 100%;
+        background-size: 100% 100%;
     }
 }
 .page-container{
@@ -67,7 +67,7 @@
 }
 @media (min-width: 1800px) { 
     .page-container{
-        width: 65%;
+        width: 1220px;
     }
 }
 .info-text{
@@ -396,10 +396,25 @@
 }
 
 /* MAIN */
+main{
+    width: 100%;
+}
+h3{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    color: #333333;
+    display: flex;
+    height: 132px;
+    align-items: center;
+}
 
+/* Меню страны */
 .main-nav--countries{
     width: 100%;
-    height: 410px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     background-color: #ECECEC;
@@ -411,8 +426,9 @@
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
+    flex: 4;
 }
 .countries-menu a{
     text-decoration: none;
@@ -423,25 +439,170 @@
     color: #333333;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
+.countries-menu li{
+    flex: 1 300px;
+}
 .main-logo{
     width: 238px;
     height: auto;
     align-self: flex-end;
     visibility: hidden;
 }
+.main-heading{
+    flex:1 100px;
+    display: flex;
+    align-items: center;
+    align-self: center;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 3.6em;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
 @media (max-width: 900px) {
     .main-nav--countries{
-        height: 507px;
+        height: 350px;
     }
     .countries-menu{
         flex-direction: column;
         align-items: flex-start;
-        justify-content: center;
-    }
-    .countries-menu li{
-        margin-top: 20px;
+        justify-content: flex-start;
     }
     .main-logo{
         visibility: visible;
+    }
+    .main-heading{
+        font-size: 1.8em;
+    }
+    .countries-menu li{
+        flex: 1 50px;
+    }
+}
+
+
+/* Секция категории */
+.main-categories{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(383px, 1fr));
+    grid-column-gap: 10px;
+}
+.categories-card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 511px;
+}
+.card-content{
+    width: 383px;
+    height: 440px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    -webkit-box-shadow: 0px 100px 100px 100px rgba(0, 0, 0, 0.74) inset;
+    -moz-box-shadow: 0px 100px 100px 100px rgba(0, 0, 0, 0.74) inset;
+    box-shadow: 0px 100px 100px 100px rgba(0, 0, 0, 0.74) inset;
+    transition: 0.8s;
+    transition-property: box-shadow;
+    background-size: 100% 100%;
+}
+.card-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1em;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: #FFFFFF;
+    padding-bottom: 20px;
+}
+.card-hover{
+    opacity: 0;
+    transition: 0.5s;
+    width: 383px;
+    height: 0px;
+    background-color:#AD2131;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition-property: height, opacity;
+}
+.hover-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1em;
+    color: #ECECEC;
+    display: block;
+    width: 80%;
+}
+.card-content:hover + .card-hover{
+    opacity: 1;
+    height: 51px;
+}
+.card-content:hover{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+.card-content--one{
+    background-image: url(./img/card1.jpg);
+}
+.card-content--two{
+    background-image: url(./img/card2.jpg);
+}
+.card-content--three{
+    background-image: url(./img/card3.jpg);
+}
+.card-content--four{
+    background-image: url(./img/card4.jpg);
+}
+.card-content--five{
+    background-image: url(./img/card5.jpg);
+}
+.card-content--six{
+    background-image: url(./img/card6.jpg);
+}
+.card-content--seven{
+    background-image: url(./img/card7.jpg);
+}
+.card-content--eight{
+    background-image: url(./img/card8.jpg);
+}
+.card-content--nine{
+    background-image: url(./img/card9.jpg);
+}
+@media (max-width:900px){
+    .card-content{
+        width: 335px;
+        height: 384px;
+    }
+    .hover-text{
+        display: none;
+    }
+    .categories-card{
+        height: fit-content;
+    }
+    .card-content--one{
+        background-image: url(./img/small_card1.jpg);
+    }
+    .card-content--two{
+        background-image: url(./img/small_card2.jpg);
+    }
+    .card-content--three{
+        background-image: url(./img/small_card3.jpg);
+    }
+    .card-content--four{
+        background-image: url(./img/small_card4.jpg);
+    }
+    .card-content--five{
+        background-image: url(./img/small_card5.jpg);
+    }
+    .card-content--six{
+        background-image: url(./img/small_card6.jpg);
+    }
+    .card-content--nine{
+        background-image: url(./img/small_card9.jpg);
     }
 }
