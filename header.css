@@ -520,8 +520,8 @@ h3{
 .card-hover{
     opacity: 0;
     transition: 0.5s;
-    width: 383px;
     height: 0px;
+    width: 100%;
     background-color:#AD2131;
     display: flex;
     align-items: center;
@@ -535,7 +535,7 @@ h3{
     font-size: 1em;
     color: #ECECEC;
     display: block;
-    width: 80%;
+    width: 70%;
 }
 .card-content:hover + .card-hover{
     opacity: 1;
@@ -574,12 +574,16 @@ h3{
     background-image: url(./img/card9.jpg);
 }
 @media (max-width:900px){
+    .main-categories{
+        grid-template-columns: repeat(auto-fit, minmax(335px, 1fr));
+    }
     .card-content{
         width: 335px;
         height: 384px;
     }
-    .hover-text{
-        display: none;
+    .card-hover{
+        height: 20px;
+        width: 335px;
     }
     .categories-card{
         height: fit-content;
@@ -605,4 +609,63 @@ h3{
     .card-content--nine{
         background-image: url(./img/small_card9.jpg);
     }
+}
+@media (min-width:900px){
+    .card-hover{width: 95.8%}
+}
+
+/* ПОПУЛЯРНОЕ */
+.popular-card{
+    width: 100%;
+    height: 440px;
+    display: flex;
+    transition: 0.8s;
+    justify-content: center;
+    flex-direction: column;
+}
+.popular-card:hover{
+    background: #DCDCDC;
+}
+.popular-content{
+    width: 100%;
+    height: 440px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.popular-content:hover + .card-hover--popular{
+    opacity: 1;
+    height: 51px;
+}
+.popular-content img{
+    align-self: center;
+}
+.popular-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.1em;
+    color: #333333;
+    padding-left: 8%;
+    padding-top: 18%;
+    padding-bottom: 2%;
+}
+.popular-price{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.15em;
+    color: #333333;
+    padding-left: 8%;
+}
+.card-hover--popular{
+    opacity: 0;
+    transition: 0.5s;
+    height: 0px;
+    width: 100%;
+    background-color:#AD2131;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    transition-property: height, opacity;
 }
