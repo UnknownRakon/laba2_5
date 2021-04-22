@@ -674,7 +674,7 @@ h3{
 
 .main-about{
     width: 70%;
-    margin: 0 auto;
+    margin: 0 auto 100px;
 }
 
 @media (max-width: 691px) { 
@@ -774,5 +774,61 @@ h4{
     }
     .about-more{
         display: block;
+    }
+}
+/* Футер */
+
+.footer-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+.footer-menu div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 20%;
+    padding-left: 10px;
+}
+.footer-menu h5{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.3em;
+    color: #333333;
+    margin-bottom: 15px;
+}
+.footer-menu a{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1em;
+    color: #666565;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+@media (max-width:800px){
+    .footer-menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        align-items: center;
+    }
+    .footer-menu div{
+        width: 100%;
+    }
+}
+.footer-images{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px 0;
+}
+@media(max-width:846px){
+    .footer-images{
+        flex-direction: column;
     }
 }
