@@ -669,3 +669,110 @@ h3{
     justify-content: space-around;
     transition-property: height, opacity;
 }
+
+/* Текст о компании */
+
+.main-about{
+    width: 70%;
+    margin: 0 auto;
+}
+
+@media (max-width: 691px) { 
+    .main-about{
+        width: 95%;
+    }
+ }
+@media (min-width: 691px) { 
+    .main-about{
+        width: 90%;
+    }
+ }
+
+@media (min-width: 807px) { 
+    .main-about{
+        width: 85%;
+    }
+}
+
+@media (min-width: 992px) { 
+    .main-about{
+        width: 80%;
+    }
+}
+@media (min-width: 1200px) { 
+    .main-about{
+        width: 75%;
+    }
+}
+@media (min-width: 1600px) { 
+    .main-about{
+        width: 70%;
+    }
+}
+.about-more{
+    display: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+    text-decoration-line: underline;
+    color: #333333;
+}
+.about-text--bold{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+    color: #333333;
+    margin-bottom: 30px;
+}
+.about-text{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+    color: #333333;
+    margin-bottom: 20px;
+}
+h4{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 2em;
+    text-transform: uppercase;
+    color: #333333;
+    margin-bottom: 40px;
+}
+.about-list{
+   color: #AD2131;
+   margin-bottom: 30px;
+   margin-left: 27px;
+}
+.about-list li{
+    margin-bottom: 10px;
+}
+.about-list span{
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+    color: #333333;
+}
+@media (max-width:600px){
+    .about-list{
+        display: none;
+    }
+    h4{
+        display: none;
+    }
+    .about-text{
+        display: none;
+    }
+    .about-more{
+        display: block;
+    }
+}
